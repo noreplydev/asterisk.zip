@@ -1,6 +1,11 @@
 {
   "name": "api",
   "type": "module",
+  "scripts": {
+    "dev": "tsx ./src/server.ts",
+    "build": "tsc",
+    "prod": "node ./dist/server.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "node": "^16.6.0",
@@ -12,10 +17,5 @@
     "@types/node": "^16.4.10",
     "tsx": "4.19.1",
     "nodemon": "3.1.7"
-  },
-  "scripts": {
-    "dev": "tsx ./src/server.ts",
-    "build": "tsc",
-    "prod": "node ./dist/server.js"
   }
 }
