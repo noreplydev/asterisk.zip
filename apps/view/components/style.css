@@ -1,0 +1,84 @@
+/***************************************************
+ * Thanks to https://svgartista.net for the animation
+ * generation
+ **************************************************/
+
+/* vertical line */
+@keyframes animate-vertical-line {
+  0% {
+    stroke-dashoffset: 13776.6865234375px;
+    stroke-dasharray: 13776.6865234375px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 13776.6865234375px;
+  }
+}
+
+.vertical-line {
+  -webkit-animation: animate-vertical-line 2s ease-in-out 1.2s both;
+  animation: animate-vertical-line 2s ease-in-out 1.2s both;
+}
+
+/* left line */
+@-webkit-keyframes animate-left-line {
+  0% {
+    stroke-dashoffset: 19350.29296875px;
+    stroke-dasharray: 19350.29296875px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 19350.29296875px;
+  }
+}
+
+@keyframes animate-left-line {
+  0% {
+    stroke-dashoffset: 19350.29296875px;
+    stroke-dasharray: 19350.29296875px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 19350.29296875px;
+  }
+}
+
+.left-line {
+  -webkit-animation: animate-left-line 1s ease-in-out 1.7s both;
+  animation: animate-left-line 1s ease-in-out 1.7s both;
+}
+
+
+/* right line */
+
+@-webkit-keyframes animate-right-line {
+  0% {
+    stroke-dashoffset: 15934.4208984375px;
+    stroke-dasharray: 15934.4208984375px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 15934.4208984375px;
+  }
+}
+
+@keyframes animate-right-line {
+  0% {
+    stroke-dashoffset: 15934.4208984375px;
+    stroke-dasharray: 15934.4208984375px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 15934.4208984375px;
+  }
+}
+
+.right-line {
+  -webkit-animation: animate-right-line 1s ease-in-out 1.4s both;
+  animation: animate-right-line 1s ease-in-out 1.4s both;
+}
