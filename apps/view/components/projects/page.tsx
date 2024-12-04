@@ -1,4 +1,3 @@
-import { Risk } from "../Risk";
 import { Cover } from "./ProjectCover";
 
 export default function Page() {
