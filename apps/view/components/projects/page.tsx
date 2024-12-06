@@ -7,26 +7,25 @@ export default function Page() {
     },
     {
       src: "/covers/ego.png"
-    }, {
-
-      src: "/covers/speak.png"
     }
   ]
 
-  return <div className="relative h-screen w-screen flex flex-row justify-center items-center
-    gap-5 overflow-hidden">
+  return <div className="relative h-fit w-screen flex flex-col justify-start items-center
+    overflow-y-scroll gap-5">
     {
-      projects.map((project) => {
+      projects.map((project, index) => {
         return <div
           key={project.src}
-          className="h-72 w-72"
+          className={" w-1/3 transition-all ease-in-out bg-red-500 overflow-hidden"
+          }
         >
           <Cover
+            className="h-full w-full"
             src={project.src}
             alt={project.alt}
           />
         </div>
       })
     }
-  </div>
+  </div >
 }
