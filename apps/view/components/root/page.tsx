@@ -17,7 +17,7 @@ export default function Page() {
             <feFuncB type="table" tableValues="0 1" />
           </feComponentTransfer>
         </filter>
-        <rect className="h-full w-full" filter="url(#noise)" opacity="1" />
+        <rect className="h-full w-full" filter="url(#noise)" opacity="0.8" />
       </svg>
       <video src="/move_in_silence.webm" autoPlay muted loop
         controls={false}
