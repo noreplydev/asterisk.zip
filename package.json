@@ -8,6 +8,7 @@
     ]
   },
   "scripts": {
+    "storage": "npm run dev -w storage",
     "api": "npm run dev -w api",
     "view": "npm run dev -w view"
   },
