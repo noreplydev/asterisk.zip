@@ -14,7 +14,7 @@ const minioClient = new Minio.Client({
     sessionToken: process.env.STORAGE_SESSION_TOKEN || null,
 });
 
-app.get('/entries', async (req, res) => {
+app.get('/buckets', async (req, res) => {
     try {
         const buckets = await minioClient.listBuckets();
         const bucketNames = buckets.map(bucket => bucket.name);
@@ -24,11 +24,11 @@ app.get('/entries', async (req, res) => {
             buckets: bucketNames,
         });
     } catch (error) {
-        console.error('Error al listar los buckets:', error);
+        console.error('Error listing buckets:', error);
 
         res.status(500).json({
             success: false,
-            message: 'Error al listar los buckets',
+            message: 'Error listing buckets',
             error: error.message,
         });
     }
