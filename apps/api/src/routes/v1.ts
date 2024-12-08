@@ -1,7 +1,25 @@
-import { minioClient } from "@/server";
+import { bucketDb, minioClient } from "@/server";
 import express from "express"
 export const V1Router = express.Router()
 
+V1Router.get('/projects', async (req, res) => {
+    try {
+        const projectsCollection = bucketDb.collection("projects");
+        const projects = await projectsCollection.find({}).toArray();
+
+        res.json({
+            success: true,
+            projects,
+        });
+    } catch (error) {
+        console.error('Error fetching projects:', error);
+
+        res.status(500).json({
+            success: false,
+            message: 'Error fetching projects',
+        });
+    }
+});
 
 V1Router.get('/buckets', async (req, res) => {
     try {
