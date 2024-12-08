@@ -1,29 +1,28 @@
 import { spawn } from 'child_process';
 import dotenv from 'dotenv';
+import { RunBlobStorage } from './blobs.js';
 
 dotenv.config({ path: '../../.env' });
+RunBlobStorage()
 
-const MINIO_EXECUTABLE = 'minio'; // assumes minio binary is on the $path 
-const MINIO_DATA_DIR = process.env.STORAGE_DATA_DIR ?? "~/";
+export function runCommand(command, args, name) {
+  const process = spawn(command, args);
 
-process.env.MINIO_ROOT_USER = process.env.STORAGE_ROOT_USER ?? "changeme"
-process.env.MINIO_ROOT_PASSWORD = process.env.STORAGE_ROOT_PASSWORD ?? "changeme"
+  process.stdout.on('data', (data) => {
+    console.log(`[${name} stdout]: ${data}`);
+  });
 
+  process.stderr.on('data', (data) => {
+    console.error(`[${name} stderr]: ${data}`);
+  });
 
-const minioProcess = spawn(MINIO_EXECUTABLE, ['server', MINIO_DATA_DIR]);
+  process.on('close', (code) => {
+    console.log(`${name} process exited with code ${code}`);
+  });
 
-minioProcess.stdout.on('data', (data) => {
-  console.log(`[MinIO stdout]: ${data}`);
-});
+  process.on('error', (err) => {
+    console.error(`Failed to start ${name} process:`, err);
+  });
 
-minioProcess.stderr.on('data', (data) => {
-  console.error(`[MinIO stderr]: ${data}`);
-});
-
-minioProcess.on('close', (code) => {
-  console.log(`MinIO process exited with code ${code}`);
-});
-
-minioProcess.on('error', (err) => {
-  console.error('Failed to start MinIO process:', err);
-});
+  return process;
+}
