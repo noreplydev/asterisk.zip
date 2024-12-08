@@ -1,7 +1,6 @@
-import dotenv from 'dotenv';
 import { runCommand } from './index.js';
 
-export function RunBlobStorage() {
+export function RunBlobDatabase() {
   const MINIO_EXECUTABLE = 'minio'; // assumes minio binary is on the $PATH
   const MINIO_DATA_DIR = process.env.STORAGE_DATA_DIR ?? "~/";
   process.env.MINIO_ROOT_USER = process.env.STORAGE_ROOT_USER ?? "changeme";

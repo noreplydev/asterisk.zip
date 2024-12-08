@@ -1,9 +1,11 @@
 import { spawn } from 'child_process';
 import dotenv from 'dotenv';
-import { RunBlobStorage } from './blobs.js';
+import { RunBlobDatabase } from './blobs.js';
+import { RunDocumentDatabase } from './documents.js';
 
 dotenv.config({ path: '../../.env' });
-RunBlobStorage()
+RunBlobDatabase()
+RunDocumentDatabase()
 
 export function runCommand(command, args, name) {
   const process = spawn(command, args);
