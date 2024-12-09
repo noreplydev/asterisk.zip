@@ -1,5 +1,6 @@
 const fetchProjects = async (fetch: any) => {
-  const projects = await fetch("http://localhost:5544/v1/projects")
+  const url = process.env.NEXT_PUBLIC_API_BASE_URL + "/v1/projects"
+  const projects = await fetch(url)
     .then((data: any) => data.json())
     .then((res: any) => res)
 
