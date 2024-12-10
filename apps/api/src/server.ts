@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { V1Router } from './routes/v1';
-import { Storage } from './entities/Storage';
+import { Storage } from '@bucketlib/api';
 
 dotenv.config({ path: '../../.env' });
 

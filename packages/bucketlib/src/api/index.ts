@@ -1,1 +1,1 @@
-export const a = "hola"
+export { Storage } from "./entities/Storage";
