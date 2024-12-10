@@ -14,15 +14,17 @@
       "@/*": [
         "./*" // Alias to src/*
       ],
+      "@bucketlib/*": [
+        "../../../packages/bucketlib/src/*"
+      ],
       "@root/*": [
-        "../../../*" // Alias to project root
+        "../../*" // Alias to project root
       ]
     }
   },
   "include": [
-    "src/**/*" // Include all files in src
-    ,
-    "../../packages/components/persistence"
+    "src/**/*",
+    "../../packages/**/*"
   ],
   "exclude": [
     "node_modules",
