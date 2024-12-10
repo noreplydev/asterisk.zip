@@ -2,7 +2,7 @@
   "name": "api",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --watch src --exec tsx ./src/server.ts",
+    "dev": "nodemon --watch ../../ --exec tsx ./src/server.ts",
     "build": "tsc",
     "prod": "node ./dist/server.js"
   },
