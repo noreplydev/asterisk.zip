@@ -3,10 +3,12 @@ import { Cover } from "./ProjectCover";
 export default function Page() {
   const projects = [
     {
-      src: "/covers/draws.png"
+      src: "/covers/draws.png",
+      alt: "draws project cover"
     },
     {
-      src: "/covers/ego.png"
+      src: "/covers/ego.png",
+      alt: "ego project cover"
     }
   ]
 
