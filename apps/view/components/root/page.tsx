@@ -20,10 +20,16 @@ export default function Page() {
         </filter>
         <rect className="h-full w-full" filter="url(#noise)" opacity="0.8" />
       </svg>
-      <video src="/move_in_silence.webm" autoPlay muted loop playsInline
-        controls={false}
-        className="opacity-50 w-screen h-screen object-cover" />
-      <source />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="opacity-50 w-screen h-screen object-cover"
+      >
+        <source src="/move_in_silence.webm" type="video/webm" />
+        <source src="/move_in_silence.mp4" type="video/mp4" />
+      </video>
     </div>
   </div>
 }
