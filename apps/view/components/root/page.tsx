@@ -3,7 +3,8 @@ import { Risk } from "../Risk";
 export default function Page() {
   return <div className="relative h-screen w-screen flex flex-col justify-center items-center
     overflow-hidden">
-    <div className="absolute top-3/4 left-1/2 grid place-items-center h-24 w-20
+    <div className="absolute top-3/4 left-1/2 flex flex-col 
+      justify-center items-center h-24 w-20
       translate-x-[-50%]">
       <Risk />
     </div>
@@ -19,7 +20,7 @@ export default function Page() {
         </filter>
         <rect className="h-full w-full" filter="url(#noise)" opacity="0.8" />
       </svg>
-      <video src="/move_in_silence.webm" autoPlay muted loop
+      <video src="/move_in_silence.webm" autoPlay muted loop playsInline
         controls={false}
         className="opacity-50 w-screen h-screen object-cover" />
       <source />
