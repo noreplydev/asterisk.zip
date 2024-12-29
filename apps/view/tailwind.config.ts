@@ -14,12 +14,18 @@ export default {
             },
             animation: {
                 appear: "appear 2s ease-out forwards 1.2s",
+                appearFull: "appearFull 2s ease-out forwards 1.2s",
             },
             keyframes: {
                 appear: {
                     "0%": { opacity: "0" },
                     "30%": { opacity: "0" },
                     "100%": { opacity: "0.2" },
+                },
+                appearFull: {
+                    "0%": { opacity: "0" },
+                    "30%": { opacity: "0" },
+                    "100%": { opacity: "1" },
                 },
             },
         },

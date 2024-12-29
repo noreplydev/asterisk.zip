@@ -1,4 +1,5 @@
 import { Risk } from "../Risk";
+import Link from "next/link";
 
 export default function Page() {
   return <div className="relative h-screen w-screen flex flex-col justify-center items-center
@@ -7,6 +8,22 @@ export default function Page() {
       justify-center items-center h-24 w-20
       translate-x-[-50%]">
       <Risk />
+    </div>
+    <div className="absolute bottom-12 left-1/2 flex flex-row
+      justify-center items-center h-fit w-fit
+      translate-x-[-50%] gap-10 opacity-0 animate-appearFull z-10">
+      <a
+        href="https://github.com/noreplydev"
+        className="hover:underline"
+      >GITHUB</a>
+      <Link
+        href="projects"
+        className="hover:underline"
+      >PROJECTS</Link>
+      <a
+        href="https://linkedin.com/in/asteriskdev"
+        className="hover:underline"
+      >LINKEDIN</a>
     </div>
     <div className="h-screen w-screen grid place-items-center opacity-0 animate-appear">
       <svg xmlns="http://www.w3.org/2000/svg" className="absolute h-full w-full">
