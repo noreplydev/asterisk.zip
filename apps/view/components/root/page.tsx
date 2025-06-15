@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Page() {
   return <div className="relative h-screen w-screen flex flex-col justify-center items-center
     overflow-hidden">
-    <div className="absolute top-3/4 left-1/2 flex flex-col 
+    <div className="absolute top-2/4 left-1/2 flex flex-col 
       justify-center items-center h-24 w-20
       translate-x-[-50%]">
       <Risk />
@@ -16,10 +16,10 @@ export default function Page() {
         href="https://github.com/noreplydev"
         className="hover:underline"
       >GITHUB</a>
-      <Link
+      {/* <Link
         href="projects"
         className="hover:underline"
-      >PROJECTS</Link>
+      >PROJECTS</Link> */}
       <a
         href="https://linkedin.com/in/asteriskdev"
         className="hover:underline"
