@@ -9,8 +9,8 @@ const jetbrains = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "asterisk",
-  description: "asterisk gallery, just an space on the internet",
+  title: "0x00",
+  description: "✱ gallery, just a creator's space on the internet",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetbrains.className} antialiased`}
+        className={`${jetbrains.className} antialiased h-screen w-screen md:p-3`}
       >
         {children}
       </body>

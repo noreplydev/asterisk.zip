@@ -14,7 +14,7 @@ export default {
             },
             animation: {
                 appear: "appear 2s ease-out forwards 1.2s",
-                appearFull: "appearFull 2s ease-out forwards 1.2s",
+                appearFull: "appearFull 2s ease-out forwards 2s",
             },
             keyframes: {
                 appear: {
