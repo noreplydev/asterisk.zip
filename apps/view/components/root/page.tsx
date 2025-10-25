@@ -10,7 +10,7 @@ export default function Page() {
       translate-x-[-50%]">
       <Risk />
     </div>
-    <div className="h-full w-full md:border-solid md:border-[#242424] md:border-[1px] rounded-lg">
+    <div className="h-full w-full md:border-solid md:border-[#242424] md:border-[1px] rounded-lg overflow-hidden">
       <div className="absolute top-44 left-1/2 translate-x-[-50%]  w-fit h-fit z-30 opacity-0 animate-appearFull
       text-center md:text-left md:translate-x-0 md:top-5 md:left-5">
         20, software engineer
